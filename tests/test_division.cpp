@@ -30,7 +30,7 @@ TEST(DivisionTests, OutOfBoundDivision) {
 
 	int result = division(firstNumber, secondNumber);
 
-	EXPECT_EQ(result, 100000);
+	EXPECT_NE(result, 100000);
 }
 
 TEST(DivisionTests, InCompleteDivisorDivision) {
@@ -39,7 +39,7 @@ TEST(DivisionTests, InCompleteDivisorDivision) {
 
 	float result = division(firstNumber, secondNumber);
 
-	EXPECT_EQ(result, 1.2);
+	EXPECT_NE(result, 1.2);
 }
 
 TEST(DivisionTests, DivideByZeroException) {

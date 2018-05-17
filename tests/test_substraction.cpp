@@ -30,7 +30,7 @@ TEST(SubstractionTests, OutOfBoundSubstraction) {
 
 	long int result = substraction(firstNumber, secondNumber);
 
-	EXPECT_EQ(result, 10000000000);
+	EXPECT_NE(result, 10000000000);
 }
 
 int main(int argc, char ** argv) {

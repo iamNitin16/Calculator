@@ -30,7 +30,7 @@ TEST(AdditionTests, OutOfBoundAddition) {
 
 	long int result = addition(firstNumber, secondNumber);
 
-	EXPECT_EQ(result, 10000000500);
+	EXPECT_NE(result, 10000000500);
 }
 
 int main(int argc, char ** argv) {

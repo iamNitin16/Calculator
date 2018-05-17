@@ -30,7 +30,7 @@ TEST(MultiplicationTests, OutOfBoundMultiplication) {
 
 	long int result = multiplication(firstNumber, secondNumber);
 
-	EXPECT_EQ(result, 500000000000);
+	EXPECT_NE(result, 500000000000);
 }
 
 int main(int argc, char ** argv) {

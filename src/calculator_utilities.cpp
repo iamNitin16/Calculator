@@ -3,27 +3,28 @@
 
 using namespace std;
 
+namespace Calculator {
+
 /*	Variable: Stack
 	Stack to save integer data to memory.
 */
 
-vector<int> stack = {};
+std::vector<int> stack = {};
 
-/*	Variable: firstNumber
-	Integer variable to save first operand of calculator.
-
-	Variable: secondNumber
+/*	Variable: secondNumber
 	Integer variable to save second operand of calculator.
 
 	Variable: result
 	Integer variable to save the result of any operation.
 */
-int firstNumber, secondNumber, result;
+int secondNumber, result;
 
 /*	Variable: operatorToEvaluate
 	Character variable to save operator(which type of operation to perform on Calculator).
 */
 char operatorToEvaluate;
+
+};
 
 /*	Function: addition
 
@@ -117,7 +118,7 @@ int division (int firstOperand, int secondOperand) {
 */
 
 void addData (int data) {
-	stack.push_back(data);
+	Calculator::stack.push_back(data);
 }
 
 /*	Function: displayStoredData
@@ -133,15 +134,15 @@ void displayStoredData () {
 	vector<int>::reverse_iterator reverseIterator;
 
 	cout << "Your Memory containes:";
-	if(stack.size() == 0) {
+	if(Calculator::stack.size() == 0) {
 		cout << " Nothing" << endl;
 	}
 	else{
-		for(reverseIterator = stack.rbegin(); reverseIterator != stack.rend(); ++reverseIterator) {
+		for(reverseIterator = Calculator::stack.rbegin(); reverseIterator != Calculator::stack.rend(); ++reverseIterator) {
 			cout << ' ' << *reverseIterator;
-			stack.erase(reverseIterator);
 		}
-		cout << endl;	
+		cout << endl;
+		Calculator::stack.clear();
 	}
 }
 
@@ -196,4 +197,45 @@ int calculatorActions(int firstOperand, int secondOperand, char operatorToEvalua
 				break;
 		default: return -1;
 	}
+}
+
+/*	Function: processing
+
+	A function for complete processing of Calculator.
+	It will take input from user and perform desired operation based on input character.
+
+	Parameters:
+	Returns:
+	See Also:
+
+		<calculatorActions>
+		<addData>
+*/
+
+void processing () {
+	cin >> Calculator::result;
+
+	do{
+		cin >> Calculator::operatorToEvaluate;
+
+		if( Calculator::operatorToEvaluate == 'm') {
+			addData(Calculator::result);
+		}
+		
+		else if( Calculator::operatorToEvaluate == 'c' ) {
+			displayStoredData();
+			cout << "Bye!!" << endl;
+			exit (0);
+		}
+		
+		else if (Calculator::operatorToEvaluate == '+' || Calculator::operatorToEvaluate == '-' || Calculator::operatorToEvaluate == '*' || Calculator::operatorToEvaluate == '/') {
+			cin  >> Calculator::secondNumber;
+			int result = calculatorActions(Calculator::result, Calculator::secondNumber, Calculator::operatorToEvaluate);
+			Calculator::result = result;
+		}
+		else {
+			cout << "Please Enter a valid Character" << endl;
+		}
+		cout << Calculator::result;
+	}while(true);
 }

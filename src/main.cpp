@@ -3,5 +3,6 @@
 int main() {
 	
 	initialInstruction();
+	processing();
 	return 0;
 }

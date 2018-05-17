@@ -100,7 +100,7 @@ int multiplication (int firstOperand, int secondOperand) {
 
 int division (int firstOperand, int secondOperand) {
 	if ( secondOperand == 0 ) {
-		throw "Division by Zero error";
+		throw "DivideByZeroError";
 	}
 
 	return firstOperand / secondOperand;

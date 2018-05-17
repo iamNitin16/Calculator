@@ -1,3 +1,8 @@
+/*	
+ 	Testing the functionality of Addition function
+ 	using Unit Tests via Google Testing framework.
+*/
+
 #include <gtest/gtest.h>
 #include "../src/calculator_utilities.cpp"
 

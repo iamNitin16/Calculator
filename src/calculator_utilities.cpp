@@ -24,7 +24,7 @@ int secondNumber, result;
 */
 char operatorToEvaluate;
 
-};
+}
 
 /*	Function: addition
 

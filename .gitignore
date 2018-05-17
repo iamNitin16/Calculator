@@ -1,3 +1,4 @@
 # removing all run files
 *.out
 src/*.out
+tests/*.out

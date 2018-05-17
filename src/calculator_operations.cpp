@@ -21,9 +21,9 @@ void initialInstruction() {
 
 	Parameters:
 
-		firstOperand: The first Operand for an Action
-		secondOperand: The Second Operand for an Action.
-		operatorToEvaluate: Tha Charater Operator for an specific action.
+		firstOperand - The first Operand for an Action
+		secondOperand - The Second Operand for an Action.
+		operatorToEvaluate - Tha Charater Operator for an specific action.
 
 	Returns:
 

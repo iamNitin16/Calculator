@@ -32,8 +32,8 @@ char operatorToEvaluate;
 
 	Parameters:
 
-		firstOperand: The first Operand for Addition.
-		secondOperand: The Second Operand for Addition.
+		firstOperand - The first Operand for Addition.
+		secondOperand - The Second Operand for Addition.
 
 	Returns:
 
@@ -50,8 +50,8 @@ int addition (int firstOperand, int secondOperand) {
 
 	Parameters:
 
-		firstOperand: The First Operand for Subtraction.
-		secondOperand: The Second Operand for Subtraction.
+		firstOperand - The First Operand for Subtraction.
+		secondOperand - The Second Operand for Subtraction.
 
 	Returns:
 
@@ -68,8 +68,8 @@ int substraction (int firstOperand, int secondOperand) {
 
 	Parameters:
 
-		firstOperand: The First Operand for multiplicaton.
-		secondOperand: The Second Operand for multiplication.
+		firstOperand - The First Operand for multiplicaton.
+		secondOperand - The Second Operand for multiplication.
 
 	Returns:
 
@@ -90,8 +90,8 @@ int multiplication (int firstOperand, int secondOperand) {
 
 	Parameters:
 
-		firstOperand: The First Operand for Division.
-		secondOperand: The Second Operand for Division.
+		firstOperand - The First Operand for Division.
+		secondOperand - The Second Operand for Division.
 
 	Returns:
 
@@ -112,7 +112,7 @@ int division (int firstOperand, int secondOperand) {
 
 	Parameters:
 
-		data: The integer which we want to add to stack.
+		data - The integer which we want to add to stack.
 
 	Returns:
 */

@@ -2,3 +2,4 @@
 *.out
 src/*.out
 tests/*.out
+tests/*.txt

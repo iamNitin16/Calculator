@@ -4,6 +4,7 @@
 */
 
 #include <gtest/gtest.h>
+#include <stdio.h>
 #include "../src/calculator_utilities.cpp"
 
 TEST(DivisionTests, SimpleDivision) {
@@ -51,6 +52,11 @@ TEST(DivisionTests, DivideByZeroException) {
 
 int main(int argc, char ** argv) {
 
+	freopen("test_division_output.txt", "w", stdout);
+
 	testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
+	int test_result = RUN_ALL_TESTS();
+
+	fclose(stdout);
+	return test_result;
 }

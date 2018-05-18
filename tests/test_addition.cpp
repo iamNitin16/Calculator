@@ -4,6 +4,7 @@
 */
 
 #include <gtest/gtest.h>
+#include <stdio.h>
 #include "../src/calculator_utilities.cpp"
 
 TEST(AdditionTests, SimpleAddition) {
@@ -35,6 +36,11 @@ TEST(AdditionTests, OutOfBoundAddition) {
 
 int main(int argc, char ** argv) {
 
+	freopen("test_addition_output.txt", "w", stdout);
+
 	testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
+	int test_result = RUN_ALL_TESTS();
+
+	fclose(stdout);
+	return test_result;
 }
